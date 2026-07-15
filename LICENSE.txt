@@ -1,0 +1,14 @@
+CAISY License v1.0
+Copyright 2026 Your Company
+
+Grant of License:
+This license grants employees of Your Company permission to use,
+modify, and run CAISY.bat solely for internal company purposes.
+
+Restrictions:
+1. No Redistribution: You may NOT share, sell, or publish CAISY outside the company.
+2. No Removal: You may NOT remove this license or copyright notice.
+3. Internal Use Only: All modifications must remain internal to the company.
+4. No Warranty: CAISY is provided "as is" without warranty.
+
+All rights not expressly granted are reserved by the copyright holder.
