@@ -1,3 +1,25 @@
+# CAISY - Offline Self-Healing Cloud Security
+
+**Find. Fix. Prove. 100% Offline.**
+
+CAISY is a local AI security engine that automatically detects and patches cloud misconfigurations like public S3 buckets, open databases, and unencrypted storage.
+
+Built for **Banks, Hospitals, and Government** teams who cannot send data to the cloud. No API keys. No data leaves your machine.
+
+## Why DACAISY?
+
+| Problem | CAISY Solution |
+| --- | --- |
+| **Data Leaks** | Auto-patches misconfigs in 10 seconds before hackers find them |
+| **Can't use Cloud AI** | Runs 100% offline with Ollama + Qwen2.5-Coder. 0 data risk |
+| **Audit Failures** | Generates JSON reports to prove HIPAA, PCI-DSS, SOC2 compliance |
+
+## Who Is This For?
+- **Banks & Fintech**: Prevent PCI fines
+- **Healthcare**: Stay HIPAA compliant
+- **Government**: Works in air-gapped networks
+- **DevOps Teams**: Gatekeeper for Terraform CI/CD
+
 # CAISY: Cloud AI Security & Automated Remediation Loop (IaC)
 
 An agentic, automated DevSecOps self-healing pipeline built to enforce zero-trust security postures on Infrastructure as Code (IaC) architectures. This engine programmatically targets, parses, and patches severe infrastructure misconfigurations (such as leaky or public object storage buckets) to block data exfiltration vectors before live deployment.
@@ -69,3 +91,8 @@ bash caisy_engine.sh
 - **Shift-Left Security Gatekeeping:** Emulates production-grade automated deployment pipelines (CI/CD) by intercepting infrastructure flaws before cloud execution.
 - **Air-Gapped Compliance Ready:** Built specifically to support highly regulated industries (defense, banking, healthcare) where code privacy mandates prohibit routing proprietary assets to external third-party APIs.
 - **Dynamic Policy Enforcement:** Leverages programmatic token replacement concepts to rapidly secure assets without interrupting deployment runtimes.
+## Disclaimer
+For defensive security and education. Always test in non-production first.
+
+## License
+MIT License - see LICENSE file
