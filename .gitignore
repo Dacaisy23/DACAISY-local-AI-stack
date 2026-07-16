@@ -26,3 +26,7 @@ Thumbs.db
 
 # Infrastructure Secrets (Keep keys out of open source)
 license.key
+agent.py
+CAISY.bat
+caisy_engine.sh
+CAISY/
