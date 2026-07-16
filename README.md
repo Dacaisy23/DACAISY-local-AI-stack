@@ -1,12 +1,13 @@
-# CAISY - AWS Security Code Reviewer
-[![Download CAISY AGENT](https://shields.io)](https://github.com)
+# 🤖 DACAISY Local AI Stack
 
-CAISY reviews your Python/boto3 code for AWS security issues.
+An automated cloud security and self-healing engine loop that targets high-risk cloud misconfigurations with automated security gatekeeper patches.
 
-## Setup
-1. Install Ollama: https://ollama.com
-2. Run: `ollama pull qwen2.5-coder:1.5b-instruct-q4_K_M`
-3. Double-click `CAISY.bat`
+### 📊 System Status & Production Distribution
+📡 [![Pipeline Status](https://github.com)](https://github.com) 💾 [![Download CAISY AGENT v1.0.2](https://shields.io)](https://github.com)
 
-## License
-Internal use only. See `LICENSE.txt`
+---
+
+## 🚀 Architectural Components
+* **Sandbox Mode (`CAISY.bat`)**: On-demand manual testing environment for localized threat validation and immediate on-device code patches.
+* **Continuous Daemon Mode (`CAISY_AGENT.exe`)**: Persistent 24/7 background agent built with the `--noconsole` framework to run invisible, automated hourly scanning loops.
+* **Pipeline Integration (`caisy.yml`)**: Continuous automated security gate checking execution triggered instantly upon repository code modifications using GitHub Actions cloud sandboxes.
