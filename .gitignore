@@ -1,0 +1,28 @@
+# =========================================================================
+# CAISY AI Stack Standard .gitignore
+# =========================================================================
+
+# PyInstaller / Compilation outputs
+build/
+dist/
+*.spec
+*.manifest
+
+# Python environment data
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# Text/IDE specific metadata
+.vscode/
+.idea/
+*.log
+Thumbs.db
+.DS_Store
+
+# Infrastructure Secrets (Keep keys out of open source)
+license.key
