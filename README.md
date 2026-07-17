@@ -2,12 +2,13 @@
 
 An automated cloud security and self-healing engine loop that targets high-risk cloud misconfigurations with automated security gatekeeper patches.
 
-### 📊 System Status & Production Distribution
-📡 [![Pipeline Status](https://github.com)](https://github.com) 💾 [![Download CAISY AGENT v1.0.2](https://shields.io)](https://github.com)
+### 📊 System Status & Production App Distribution
+📡 [![Pipeline Status](https://github.com)](https://github.com) 💾 [![Download CAISY AI App v1.0.4](https://shields.io)](https://github.com)
 
 ---
 
 ## 🚀 Architectural Components
-* **Sandbox Mode (`CAISY.bat`)**: On-demand manual testing environment for localized threat validation and immediate on-device code patches.
-* **Continuous Daemon Mode (`CAISY_AGENT.exe`)**: Persistent 24/7 background agent built with the `--noconsole` framework to run invisible, automated hourly scanning loops.
-* **Pipeline Integration (`caisy.yml`)**: Continuous automated security gate checking execution triggered instantly upon repository code modifications using GitHub Actions cloud sandboxes.
+* **Unified Control Hub (`CAISY_AI.exe`)**: The primary text-based desktop control panel dashboard used to track status structures and launch core workflows with a single click [Dacaisy23/DACAISY-local-AI-stack].
+* **Sandbox Mode (`CAISY.bat`)**: Dev Tier tool for on-demand manual testing environments, localized threat validation, and immediate on-device code patches [Dacaisy23/DACAISY-local-AI-stack].
+* **Continuous Daemon Mode (`CAISY_AGENT.exe`)**: Enterprise Tier tool running as a persistent 24/7 background agent built with the `--noconsole` framework to execute invisible, automated hourly scanning loops [Dacaisy23/DACAISY-local-AI-stack].
+* **Pipeline Integration (`caisy.yml`)**: Continuous automated security gate checking execution triggered instantly upon repository code modifications using GitHub Actions cloud sandboxes [Dacaisy23/DACAISY-local-AI-stack].
