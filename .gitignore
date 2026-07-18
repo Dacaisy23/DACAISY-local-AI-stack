@@ -32,3 +32,6 @@ caisy_engine.sh
 CAISY/
 main.tf
 app.py
+
+# Block real local configuration files
+.env
