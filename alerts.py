@@ -11,11 +11,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # --- STEP 1: CONFIGURE LOCAL FILE LOGGING ---
-# Setup a persistent log file that stays completely local on the client machine
 log_formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
 log_file = "security_alerts.log"
 
-# Max file size 5MB, keeps up to 3 backup files automatically to save disk space
 file_handler = RotatingFileHandler(log_file, maxBytes=5*1024*1024, backupCount=3, encoding="utf-8")
 file_handler.setFormatter(log_formatter)
 file_handler.setLevel(logging.ERROR)
@@ -27,7 +25,6 @@ logger.addHandler(file_handler)
 
 # --- STEP 2: CONFIGURE SECURE HTML EMAIL SYSTEM ---
 def send_ciso_critical_alert(error_message, traceback_details):
-    """Sends an optimized HTML email alert to the clients CISO via internal network."""
     smtp_host = os.getenv("SMTP_HOST")
     smtp_port = os.getenv("SMTP_PORT")
     smtp_user = os.getenv("SMTP_USER")
@@ -42,7 +39,6 @@ def send_ciso_critical_alert(error_message, traceback_details):
 
     subject = f"[CRITICAL SECURITY ALERT] {environment.upper()} System Exception"
     
-    # Clean HTML styling designed for professional enterprise presentation
     html_body = f"""
     <html>
     <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333333; margin: 0; padding: 20px;">
@@ -78,7 +74,7 @@ def send_ciso_critical_alert(error_message, traceback_details):
     """
 
     message = MIMEMultipart("alternative")
-    message["From"] = "caisy-system@local.ai"
+    message["From"] = "CAISY-AI-SYSTEM@caisy.local"
     message["To"] = ciso_email
     message["Subject"] = subject
     message.attach(MIMEText(html_body, "html"))
@@ -100,14 +96,8 @@ def send_ciso_critical_alert(error_message, traceback_details):
 def global_exception_handler(exctype, value, tb):
     traceback_details = "".join(traceback.format_exception(exctype, value, tb))
     error_message = str(value)
-    
-    # Append the error details locally to your permanent security file log
     logger.error(f"Application Unhandled Exception: {error_message}\n{traceback_details}")
-    
-    # Execute the CISO email alert delivery pipeline
     send_ciso_critical_alert(error_message, traceback_details)
-    
-    # Still print default trace logs to standard on-site terminal screen output
     sys.__excepthook__(exctype, value, tb)
 
 sys.excepthook = global_exception_handler
