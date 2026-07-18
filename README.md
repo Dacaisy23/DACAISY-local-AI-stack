@@ -1,4 +1,4 @@
-# 🤖 DACAISY Local AI Stack
+# 🤖 CAISY Local AI Stack
 
 An automated cloud security and self-healing engine loop that targets high-risk cloud misconfigurations with automated security gatekeeper patches.
 
